@@ -1,0 +1,279 @@
+body,html {
+    background: #e9ebee;
+    margin: 0;
+}
+
+/*blue top strip*/
+#blueTop {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background: #4267b2;
+    color: white;
+    font-family: sans-serif;
+    top: 0px;
+}
+
+#textBlueStripe {
+    width: 1300px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+#Logo {
+    position: absolute;
+    margin: auto;
+    left: 35px;
+    font-size: 30px;
+    top: 8px;
+}
+#formSearch {
+    position: absolute;
+    margin: auto;
+    left: 400px;
+    top: 10px;
+    border: 1px solid #3b5998;
+    width: max-content;
+    height: max-content;
+}
+#entrySearch {
+    float: left;
+    height: 20px;
+    width: 300px;
+}
+#boxSearchIcon {
+    position: relative;
+    background: #f5f6f7;
+    height: 26px;
+    width: 50px;
+    float: left;
+}
+#buttonIcon {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+}
+#username_top_page {
+    position: relative;
+    left: 800px;
+    width: max-content;
+}
+#logOutButton {
+    position: absolute;
+    left: 1000px;
+    top: 18px;
+    width: 55px;
+}
+
+/*everything outside the blue top strip*/
+
+#belowBlueTop{
+    width: 1200px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 60px;
+}
+/*select personal/friends/public*/
+#selectEnv{
+    width: 200px;
+    float: left;
+    margin-right: 50px;
+}
+.selectType{
+    width: 180px;
+}
+.selectType img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 14px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 80px;
+}
+.typeText{
+    float: left;
+    font-size: 25px;
+    margin-bottom: 80px;
+}
+
+
+/*select pages/polls*/
+#selectContent{
+    position: relative;
+    float: right;
+    width: 1200px;
+    height: 100px;
+}
+#selectContentList{
+    position: relative;
+    left: 210px;
+    top: -10px;
+}
+#selectContentList img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    top: 10px;
+}
+#selectContentList img, p{
+    float: left;
+    font-size: 25px;
+}
+#selectContentList li{
+    display: inline;
+    float: left;
+    margin-right: 322px;
+    width: 200px;
+    height: 80px;
+}
+
+
+
+/*white strips of polls*/
+
+#pollsSpace{
+    float: left;
+    width: 900px;
+}
+.pollText {
+    margin-bottom: 30px;
+    background: white;
+    min-height: 100px;
+    border-radius: 5px;
+    width: 650px;
+
+}
+.pollText p {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 600px;
+    word-break: break-all;
+    padding-right: 15px
+}
+.textPoll {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    top: -20px;
+    left: 50px;
+}
+
+
+p {
+    font-family: sans-serif;
+}
+.circular--portrait {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  float:left;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+} 
+
+/*select vote, next to each poll*/
+.selectVote{
+    width: 250px;
+    float: right;
+}
+.yes, .no {
+    position: relative;
+    margin-right: 10px;
+    padding: 18px;
+    border-radius: 3px;
+}
+.yes {
+    background: green;
+}
+.no {
+    background: red;
+}
+.yesOrNo {
+    position: relative;
+    top: 25px;
+}
+.yesOrNo li{
+    display: inline;
+}
+
+.threeOptions {
+    position: relative;
+    top: 25px;
+}
+.threeOptions li{
+    display: inline;
+    background: #DAA520;
+    padding: 22px;
+    margin-right: 12px;
+    border-radius: 3px;
+} 
+
+
+#submitPollButton {
+    float: right;
+    position: relative;
+}
+#formNewPollTextArea{
+    width: 634px;
+    height: 69px;
+    border: transparent;
+    outline: none !important;
+    resize: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+
+#usernamePoll {
+    position: relative;
+    
+} 
+
+#buttonLoadPolls{
+    margin: auto;
+    width: 100%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#AnimatedPollsIcon, #AnimatedPublicIcon {
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(47, 85, 151);
+}
+
+#AnimatedPollsImg, #AnimatedPublicImg {
+    opacity: 1;
+}
+
+#AnimatedPagesIcon, #AnimatedFriendsIcon, #AnimatedPersonalIcon {
+    color: black;
+}
+
+#AnimatedPagesImg, #AnimatedFriendsImg, #AnimatedPersonalImg {
+    opacity: 0.21;
+}
+

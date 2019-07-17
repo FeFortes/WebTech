@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en-GB" xml:lang="en-GB">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="css/LogInPage.css">
+</head>
+
+<body>
+
+<div id="loginInfo">
+    <div id="textBlueStripe">
+        <h1 id="Logo">Pnyx</h1>
+        <form action="/submit-login" method="POST" id="formLogIn">
+            <label for="Username">
+                <span>Username</span>
+                <input type="text" id="Username" name="usernameLogin"/>
+            </label>
+            <label for="Password">
+                <span>Password</span>
+                <input type="text" id="Password" name="passwordLogin"/>
+            </label>
+            <input type="submit" id="LogInButton" value="Log in" />
+        </form>
+        <p id = "loginFail" ><%= loginErrorMessage %></p>
+    </div>
+</div>
+    
+<div id="CreateAccountAndDescription">
+    <div id="siteDescription">
+        <p>Pnyx helps you construct and share opinions</p>
+        <img src="img/Login/Debate.png" alt="ImageDebate" id="DebateImg"/>
+        <img src="img/Login/PersonProfile.png" alt="ImagePersonalProfile" id="PersonalProfileImg" />
+        <img src="img/Login/horse.png" alt="horse" id="horse"/>
+        <img src="img/Login/butterfly.png" alt="butterfly" id="butterfly"/>
+    </div>
+    <div id="CreateAccount">
+        <p>Create a new account</p>
+        <form action="/submit-signUp" method="POST" id="formSignUp">
+            <label for="newUsername">
+                <span>Username</span>
+                <input type="text" id="newUsername" name="usernameSignUp"/>
+            </label>
+            <label for="newPassword">
+                <span>Password</span>
+                <input type="text" id="newPassword" name="passwordSignUp"/>
+            </label>
+            <label for="newEmail">
+                <span>Email</span>
+                <input type="text" id="newEmail" name="emailSignUp"/>
+            </label>
+            <input type="submit" id="signUpButton" value="Sign up" />
+        </form>
+        <p id = "signUpFail" ><%= signUpErrorMessage %></p>
+        <img src="img/Login/vectorizedButterfly.png" alt="vectorizedButterfly" id="vectorizedButterfly"/>
+    </div>
+    
+</div>
+
+
+
+
+</body>
+    
+<script src="js/homePage.js"></script>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en-GB" xml:lang="en-GB">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../css/Poll.css">
+</head>
+
+<body>
+
+<div id="blueTop">
+    <div id="textBlueStripe">
+        <p id="Logo">Pnyx</p>
+        <form action="contact.php" method="" id="formSearch">
+            <label for="entrySearch">
+                <input type="text" id="entrySearch" value="Search"/>
+            </label>
+            <div id="boxSearchIcon">
+                <img src="../img/Icons/Search.png" id="buttonIcon" alt="buttonIcon"/>
+            </div>
+        </form>
+        <p id="username_top_page"><%= username%></p>
+        <form action="/submit-logout" method="POST" id="logOutButton">
+            <input type="submit" value="Log out" />
+        </form>
+    </div>
+</div>
+    
+<div id="belowBlueTop">
+    <div id="selectContent">
+        <ul id="selectContentList">
+            <li onmouseover="animationSelect('AnimatedPollsIcon', 'AnimatedPollsImg')" onmouseout="animationNotSelect('AnimatedPollsIcon', 'AnimatedPollsImg')">
+                <img src="../img/Icons/Poll.png" alt="Poll" class="typeIcon" id="AnimatedPollsImg"/>
+                <p href="http://www.w3schools.com" id="AnimatedPollsIcon">Polls</p>
+            </li>
+            
+            <li onmouseover="animationSelect('AnimatedPagesIcon', 'AnimatedPagesImg')" onmouseout="animationNotSelect('AnimatedPagesIcon', 'AnimatedPagesImg')">
+                <img src="../img/Icons/Pages.png" alt="Pages" class="typeIcon" id="AnimatedPagesImg"/>
+                <p href="http://www.w3schools.com" id="AnimatedPagesIcon">Pages</p>
+            </li>
+        </ul>
+    </div>
+    
+    
+    
+    <div id="selectEnv">
+        <div class="selectType" onmouseover="animationSelect('AnimatedPersoanalIcon', 'AnimatedPersonalImg')" onmouseout="animationNotSelect('AnimatedPersoanalIcon', 'AnimatedPersonalImg')" >
+            <img src="../img/Icons/Personal.png" alt="Personal" class="typeIcon" id="AnimatedPersonalImg"/>
+            <p class="typeText" id="AnimatedPersoanalIcon" >Personal</p>
+        </div>
+        <div class="selectType" onmouseover="animationSelect('AnimatedFriendsIcon', 'AnimatedFriendsImg')" onmouseout="animationNotSelect('AnimatedFriendsIcon', 'AnimatedFriendsImg')" >
+            <img src="../img/Icons/Friends.png" alt="Friends" class="typeIcon" id="AnimatedFriendsImg"/>
+            <p class="typeText" id="AnimatedFriendsIcon">Friends</p>
+        </div>
+        <div class="selectType" onmouseover="animationSelect('AnimatedPublicIcon', 'AnimatedPublicImg')" onmouseout="animationNotSelect('AnimatedPublicIcon', 'AnimatedPublicImg')">
+            <img src="../img/Icons/Public.png" alt="Public" class="typeIcon" id="AnimatedPublicImg"/>
+            <p class="typeText" id="AnimatedPublicIcon">Public</p>
+        </div>
+    </div>
+    
+    <div id="pollsSpace">
+        <div class="pollStrip">
+
+
+            
+            <div class="pollText">
+                <form action="/submit-new-poll" method="POST" id="writePollForm">
+                    <textarea name="newPoll" rows="8" cols="80" id="formNewPollTextArea">Write your poll here..</textarea>
+                    <br>
+                    <input type="submit" id="submitPollButton" value="Post your poll" />
+                </form>
+            </div>
+
+        </div>
+            
+
+<!--
+
+
+        </div>
+        <div class="pollStrip">
+            <div class="selectVote">
+                <ul class="threeOptions">
+                    <li class="opt1of3">1</li>
+                    <li class="opt1of3">2</li>
+                    <li class="opt1of3">3</li>
+                </ul>
+            </div>
+            <div class="pollText">
+                <p>Do you think taxes should (1) increase, (2) decrease or (3) remain the same?
+                </p>
+            </div>
+        </div>
+        <div class="pollStrip">
+            <div class="selectVote">
+                <ul class="yesOrNo">
+                    <li class="yes"><a>Yes</a></li>
+                    <li class="no"><a>No</a></li>
+                </ul>
+            </div>
+            <div class="pollText">
+                <p>Should weed be decriminalised?</p>
+            </div>
+        </div>
+        
+-->
+
+        <% for(var i=0; i < polls.length; i++) { %>
+            <div class="pollStrip" id="pollStrip<%= polls[i].id %>">
+                <div class="selectVote">
+                    <ul class="yesOrNo">
+                        <li class="yes" onclick="submitVote(<%= polls[i].id %>, 1)" id="yes_id<%= polls[i].id %>"><a><%= polls[i].yes %></a></li>
+                        <li class="no" onclick="submitVote(<%= polls[i].id %>, 0)" id="no_id<%= polls[i].id %>"><a><%= polls[i].no %></a></li>
+                    </ul>
+                </div>
+                <div class="pollText">
+                    <div class="circular--portrait">
+                        <img src="../img/Icons/ProfilePicture.png" id="profilePicture" alt="profilePicture"/>
+                    </div> 
+                    <!--
+                    <div id="usernameContent">
+                        <ul id="usernameContentList">
+                            <li>Username</li>
+                            <li>Date</li>
+                        </ul>
+                    </div> */
+                    -->
+                    <p id="usernamePoll"><%= polls[i].username %>, <%= polls[i].date %>, id: <%= polls[i].id %></p>
+                    <p class="textPoll"><%= polls[i].text %></p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <button type="button" onclick="loadPolls(document.getElementById('pollsSpace').childElementCount-1)" id="buttonLoadPolls">Load more polls</button>
+</div>
+
+</body>
+    
+<script src="../js/poll.js"></script>
+    
+</html>

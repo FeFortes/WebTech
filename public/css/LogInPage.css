@@ -1,0 +1,179 @@
+body,html {
+    background: #e9ebee;
+    margin: 0;
+}
+
+#loginInfo{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    background: #3b5998;
+    color: white;
+    font-family: sans-serif;
+    top: 0px;
+}
+#textBlueStripe {
+    width: 1300px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+#Logo {
+    position: absolute;
+    left: 100px;
+    
+}
+
+
+#formLogIn {
+    position: absolute;
+    left: 600px;
+    top: 15px;
+}
+
+#loginInfo {
+    color: white;
+}
+
+#loginInfo label { 
+    float: left; 
+    margin: 0 20px 0 0; 
+}
+
+#loginInfo span { 
+    display: block; 
+    margin: 0 0 3px;  
+    font-size: 0.8em;
+}
+
+#Username, #Password { 
+    width: 160px; 
+    height: 10px;
+    border: 1px solid #000; 
+    padding: 5px; 
+}
+
+/*#LogInButton {
+    position: absolute;
+    left: 980px;
+    top: 30px;
+   width: 55px;
+}*/
+#LogInButton {
+    position: absolute;
+    top: 18px;
+    width: 55px;
+}
+
+#CreateAccountAndDescription {
+    width: 1000px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+}
+
+#siteDescription {
+    width: 500px;
+    float: left;    
+}
+
+#CreateAccount {
+    float: right;
+    width: 50%;
+    font-size: 30px;
+    position: relative;
+    left: 50px;
+}
+
+#siteDescription p {
+    font-size: 30px;
+    position: absolute;
+    width: 50%;
+    color: #0e385f;
+}
+
+#DebateImg, #PersonalProfileImg, #horse, #vectorizedButterfly, #butterfly{
+    position: relative;
+    top: 90px;
+}
+
+#SignUpButtonImg {
+    display:block;
+    position: relative;
+    margin: 63px;
+    top: 40px;
+}
+#signUpButton {
+    display:block;
+    position: relative;
+    margin: px;
+    top: 40px;
+    background-color: #4CAF50;
+    color: white;
+    width: 420px;
+    height: 50px;
+    font-size: 1em;
+}
+
+#formSignUp label { 
+    float: left; 
+}
+#formSignUp span{ 
+    display: block; 
+    font-size: 0.8em;
+}
+
+
+#newUsername, #newPassword {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #bdc7d8;
+}
+
+#newEmail {
+    width: 420px;
+    height: 30px;
+    border: 1px solid #bdc7d8;
+}
+
+#loginFail {
+    position: absolute;
+    left: 1060px;
+    width: 200px;
+    top: 5px;
+    color: red;
+}
+
+#signUpFail {
+    position: relative;
+    top: 20px;
+    color: red;
+}
+
+#vectorizedButterfly, #butterfly, #horse {
+    position: relative;
+    top: 100px;
+   
+}
+#vectorizedButterfly{
+    width: 313px;
+    height: 170px;
+}
+#butterfly{
+    width: 200px;
+    height: 156px;
+ }
+#horse {
+    width: 286px;
+    height: 244px;
+}
+
