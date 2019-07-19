@@ -8,15 +8,15 @@ module.exports = function(req, res) {
 	var cookie = req.cookies.sessionCookie;
     console.log("cookie logging out: " + cookie);
   	
-  	//TODO: SET COOKIE SESSION TO NULL IN THE DATABASE AND IN THE BROWSER AND FLAG LOGGED IN TO 0
-  	//REDIRECT TO LOGIN PAGE
+  	// SET COOKIE SESSION TO NULL IN THE DATABASE AND IN THE BROWSER AND FLAG LOGGED IN TO 0
+  	// REDIRECT TO LOGIN PAGE
 	db.serialize(function() {
   		db.each("UPDATE Users SET flagLoggedIn = False, sessionCookie = NULL WHERE sessionCookie=?;", [ cookie ], (err, row) => {
  			if (err) {
   	 		throw err;
  			}	
 		});
-	}); //QUESTION: I THINK I SHOULD PUT THE 2 LINES BELOW AFTER THE IF ERR, TO FORCE SEQ EXECUTION
+	}); // THERE IS NO NEED TO PUT THE 2 LINES BELOW AFTER THE IF ERR, TO FORCE SEQ EXECUTION
 
 
 	res.cookie('sessionCookie', null);

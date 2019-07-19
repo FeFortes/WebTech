@@ -21,14 +21,12 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-app.get(['/', 'index.html'], function(req, res) { //TO DO: CALL THE HANDLER, WHICH CHECKS IF THE USER HAS COOKIE
+app.get(['/', 'index.html'], function(req, res) { 
 	logInPageHandle(req, res);   
     //res.render('index.ejs', {signUpErrorMessage: "", loginErrorMessage: ""}); //other option: "The Username chosen already exists"
 }); //The password that you've entered is incorrect.
 
 
-//TODO: IF THE PERSON TRIES TO ACCESS THE POLLS PAGE, REDIRECT IF HE IS NOT LOGGED IN; SHOW IT IF HE IS
-//DELETE THE COLUMN FLAG LOGGED IN, AS THE EXISTANCE OF COOKIE HAS THE SAMEE MEANING
 app.post('/submit-login', (req, res) => { //Submitted LOGIN
   //const username = req.body.username
   console.log("entered login!");
@@ -52,7 +50,7 @@ app.post('/submit-new-poll', (req, res) => { //Submitted NEW POLL
   newPollSubmittedHandle(req, res);
 })
 
-app.post('/submit-vote', (req, res) => { //Submitted NEW POLL
+app.post('/submit-vote', (req, res) => { //Submitted NEW VOTE
   console.log("voted poll id: " + req.body.pollId + " vote: " + req.body.vote);
   voteSubmittedHandle(req, res);
 })

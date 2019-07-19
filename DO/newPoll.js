@@ -12,7 +12,7 @@ module.exports = function(req, res) {
 
     db.serialize(function() {
 		db.get("SELECT username FROM Users WHERE sessionCookie = ?;", [ cookie ], (err, row) => {
-      		if ((!(row === undefined)) && (!(cookie === null))) { //the brower already has a session cookie: no need to login, just redirect
+      		if ((!(row === undefined)) && (!(cookie === null))) { //the browser already has a session cookie: no need to login, just redirect
       			var username = row.username;
             console.log("user submitting poll: " + username);
       			

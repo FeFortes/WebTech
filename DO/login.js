@@ -10,7 +10,7 @@ module.exports = function(req, res) {
 	var cookie = req.cookies.sessionCookie;
     console.log("login name: " + username + "; login password: " + password + "; cookie: " + cookie);
 
-    //TODO: IF THE USER HAS A COOKIE SET UP (LOGGED IN), REDIRECT TO THE POLLS PAGE OF THE USER
+    // IF THE USER HAS A COOKIE SET UP (LOGGED IN), REDIRECT TO THE POLLS PAGE OF THE USER
 
 
 	db.serialize(function() {

@@ -8,7 +8,7 @@ module.exports = function(req, res) {
 	var id = req.body.pollId;
 	var vote = req.body.vote;
   	
-	//TODO: CHECK WHICH USER IS LOGGED IN AND IF HE/SHE HAS ALREADY VOTTED ON THAT POLL
+	// CHECK WHICH USER IS LOGGED IN AND IF HE/SHE HAS ALREADY VOTTED ON THAT POLL
 	console.log("handling submission!");
 	db.serialize(function() { //make join of tables
 		db.get("SELECT username FROM Users WHERE sessionCookie = ?;", [ cookie ], (err, row) => {
